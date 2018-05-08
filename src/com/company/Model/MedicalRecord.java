@@ -6,12 +6,12 @@ public class MedicalRecord {
     private Integer id;
     private Integer idPatient;
     private String ambulTreatment;
-    private Date dateFrom;
-    private Date dateTo;
+    private String dateFrom;
+    private String dateTo;
     private String dispRegister;
-    private Date dateStartTreatment;
+    private String dateStartTreatment;
 
-    public MedicalRecord(Integer id, Integer idPatient, String ambulTreatment, Date dateFrom, Date dateTo, String dispRegister, Date dateStartTreatment){
+    public MedicalRecord(Integer id, Integer idPatient, String ambulTreatment, String dateFrom, String dateTo, String dispRegister, String dateStartTreatment){
         this.id = id;
         this.idPatient = idPatient;
         this.ambulTreatment = ambulTreatment;
@@ -45,19 +45,19 @@ public class MedicalRecord {
         this.ambulTreatment = ambulTreatment;
     }
 
-    public Date getDateFrom() {
+    public String getDateFrom() {
         return dateFrom;
     }
 
-    public void setDateFrom(Date dateFrom) {
+    public void setDateFrom(String dateFrom) {
         this.dateFrom = dateFrom;
     }
 
-    public Date getDateTo() {
+    public String getDateTo() {
         return dateTo;
     }
 
-    public void setDateTo(Date dateTo) {
+    public void setDateTo(String dateTo) {
         this.dateTo = dateTo;
     }
 
@@ -69,11 +69,11 @@ public class MedicalRecord {
         this.dispRegister = dispRegister;
     }
 
-    public Date getDateStartTreatment() {
+    public String getDateStartTreatment() {
         return dateStartTreatment;
     }
 
-    public void setDateStartTreatment(Date dateStartTreatment) {
+    public void setDateStartTreatment(String dateStartTreatment) {
         this.dateStartTreatment = dateStartTreatment;
     }
 }
