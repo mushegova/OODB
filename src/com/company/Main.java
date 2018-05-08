@@ -6,8 +6,6 @@ import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import com.db4o.query.Predicate;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Main {
@@ -39,6 +37,11 @@ public class Main {
             addMedRec(db, 3, 6, "Y", "10.03.2018", "19.03.2018", "Y", "10.03.2018");
             addMedRec(db, 4, 6, "N", "01.04.2018", "10.04.2018", "N", "01.04.2018");
 
+            printMostWorkPatient(db);
+            printPatient(db);
+            ObjectSet<Patient> patientsForPrint = findPatientByStateStatus(db, "Пенсионер", "Направлен в стационар");
+            printPatientWithPension(db, patientsForPrint);
+            
         } finally {
             db.close();
         }
